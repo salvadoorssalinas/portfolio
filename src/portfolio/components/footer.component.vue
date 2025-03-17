@@ -1,5 +1,5 @@
 <script setup>
-  console.log("footer")
+
 </script>
 
 <template>
