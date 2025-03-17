@@ -26,6 +26,7 @@ import Timeline from 'primevue/timeline';
 import {Form} from '@primevue/forms';
 import Message from "primevue/message";
 import {Toast} from "primevue";
+import ToastService from "primevue/toastservice";
 import 'primeicons/primeicons.css';
 
 const app = createApp(App);
@@ -55,4 +56,5 @@ app.use(i18n)
     .component('pv-form', Form)
     .component('pv-message', Message)
     .component('pv-toast', Toast)
+    .use(ToastService)
     .mount('#app')

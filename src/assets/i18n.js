@@ -50,11 +50,11 @@ const messages = {
         "contact-email": "Email",
         "contact-message": "Message",
         "contact-button": "Send",
-        "invalid-name": "Please enter a name",
-        "invalid-email": "Please enter a valid email",
-        "invalid-message": "Please enter a message",
-        "success-message": "Message sent successfully",
-        "error-message": "An error occurred while sending the message",
+        "email-invalid": "Please enter a valid email",
+        "name-invalid": "Please enter a valid name",
+        "message-invalid": "Please enter a valid message",
+        "success": "Message sent successfully",
+        "error": "An error occurred while sending the message",
         "copyright": "© 2025. All Rights Reserved. Developed by Salvador Salinas."
     },
     es: {
@@ -106,11 +106,11 @@ const messages = {
         "contact-email": "Correo Electrónico",
         "contact-message": "Mensaje",
         "contact-button": "Enviar",
-        "invalid-name": "Por favor ingresa un nombre",
-        "invalid-email": "Por favor ingresa un correo electrónico válido",
-        "invalid-message": "Por favor ingresa un mensaje",
-        "success-message": "Mensaje enviado exitosamente",
-        "error-message": "Ocurrió un error al enviar el mensaje",
+        "email-invalid": "Por favor ingresa un correo electrónico válido",
+        "name-invalid": "Por favor ingresa un nombre válido",
+        "message-invalid": "Por favor ingresa un mensaje válido",
+        "success": "Mensaje enviado exitosamente",
+        "error": "Ocurrió un error al enviar el mensaje",
         "copyright": "© 2025. Todos los derechos reservados. Desarrollado por Salvador Salinas."
     }
 };
