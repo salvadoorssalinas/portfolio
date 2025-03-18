@@ -3,6 +3,7 @@
 import { ref } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import { useI18n } from 'vue-i18n';
+import {ContactService} from "@/portfolio/services/contact.service.js";
 const { t } = useI18n();
 
 const toast = useToast();
@@ -12,6 +13,8 @@ const initialValues = ref({
   name: '',
   data: ''
 });
+
+const touched = ref(false);
 
 const resolver = ({ values }) => {
   const errors = {};
@@ -33,15 +36,34 @@ const resolver = ({ values }) => {
   };
 };
 
-const onFormSubmit = async ({ values }) => {
+const onFormSubmit = async (form) => {
+  if (!form.valid) {
+    toast.add({ severity: 'error', summary: t('error'), life: 3000 });
+    return;
+  }
   try {
     // send form data to the server
+    const data = {
+      email: form.states.email?.value,
+      name: form.states.name?.value,
+      data: form.states.data?.value
+    };
+    const response = await ContactService.sendForm(data)
 
-    toast.add({ severity: 'success', summary: t('success'), life: 3000 });
+    toast.add({
+      severity: response ? 'success' : 'error',
+      summary: response ? t('success') : t('error'),
+      life: 3000
+    });
   } catch (error) {
     toast.add({ severity: 'error', summary: t('error'), life: 3000 });
+    console.log(error);
   }
 };
+
+const onFormChange = () => {
+  touched.value = true;
+}
 
 </script>
 
@@ -50,20 +72,20 @@ const onFormSubmit = async ({ values }) => {
     <h2>{{ $t('contact-title') }}</h2>
     <p>{{ $t('contact-description') }}</p>
     <pv-toast />
-    <pv-form v-slot="$form" :validate-on-blur="true" :initialValues :resolver @submit="onFormSubmit" >
+    <pv-form v-slot="$form" :validate-on-blur="true" :initialValues :resolver @submit="onFormSubmit" @change="onFormChange" >
       <div class="flex flex-col gap-1">
-        <pv-inputtext name="email" type="text" :placeholder="$t('contact-email')" fluid class="inputt" />
+        <pv-inputtext name="email" type="text" :placeholder="t('contact-email')" fluid class="inputt" />
         <pv-message class="message" v-if="$form.email?.invalid" severity="error" size="small" variant="simple">{{ $form.email.error.message }}</pv-message>
       </div>
       <div class="flex flex-col gap-1">
-        <pv-inputtext name="name" type="text" :placeholder="$t('contact-name')" fluid :formControl="{ validateOnValueUpdate: true }" class="inputt" />
+        <pv-inputtext name="name" type="text" :placeholder="t('contact-name')" fluid :formControl="{ validateOnValueUpdate: true }" class="inputt" />
         <pv-message class="message" v-if="$form.name?.invalid" severity="error" size="small" variant="simple">{{ $form.name.error.message }}</pv-message>
       </div>
       <div class="flex flex-col">
-        <pv-textarea name="data" :placeholder="$t('contact-message')" rows="3" fluid class="inputt" />
+        <pv-textarea name="data" :placeholder="t('contact-message')" rows="3" fluid class="inputt" />
         <pv-message class="message" v-if="$form.data?.invalid" severity="error" size="small" variant="simple">{{ $form.data.error.message }}</pv-message>
       </div>
-      <pv-button :disabled="!$form.valid" type="submit" severity="secondary" :label="$t('contact-button')" class="inputt" />
+      <pv-button :disabled="!$form.valid || !touched" type="submit" severity="secondary" :label="t('contact-button')" class="inputt" />
     </pv-form>
   </div>
 
