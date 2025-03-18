@@ -92,7 +92,7 @@ const onFormChange = () => {
   <div id="other">
     <h2>{{ $t('contact-other') }}</h2>
     <div id="social">
-      <a href="https://www.linkedin.com/in/salvador-salinas-torres-b90945284/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/salvador-salinas-b90945284/" target="_blank" rel="noopener noreferrer">
         <i class="pi pi-linkedin pi-2x"></i>
       </a>
       <a href="https://github.com/salvadoorssalinas" target="_blank" rel="noopener noreferrer">
