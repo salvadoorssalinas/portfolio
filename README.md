@@ -1,16 +1,28 @@
-# portfolio
+# Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+A responsive and interactive personal portfolio built with Vue.js to highlight my expertise, projects, and achievements as a Software Engineering Student.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Responsive Design**: The portfolio is designed to be responsive and accessible on all devices.
+- **Knowledge**: A list of my skills and technologies.
+- **Projects**: A showcase of my projects.
+- **Contact Form**: A contact form to get in touch with me.
 
-## Customize configuration
+## Technologies
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Vue.js**: A progressive JavaScript framework for building user interfaces.
+- **PrimeVue**: A collection of rich UI components for Vue.js.
+- **i18n**: Internationalization plugin for Vue.js.
 
 ## Project Setup
+
+### Requirements
+
+- Node.js
+- npm
+
+### Install Dependencies
 
 ```sh
 npm install
@@ -27,3 +39,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Credits
+
+Developed by Salvador Salinas.
