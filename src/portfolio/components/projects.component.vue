@@ -33,7 +33,7 @@ watch(locale, (newLang) => {
             {{ project.item.date }}
           </template>
           <template #content>
-            <img :src="`../../src/assets/images/${project.item.image}`" :alt="project.item.name" class="shadow-sm" />
+            <img :src="`/assets/images/${project.item.image}`" :alt="project.item.name" class="shadow-sm" />
             <p>
               {{ project.item.description }}
             </p>
