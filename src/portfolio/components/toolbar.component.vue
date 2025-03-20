@@ -9,7 +9,7 @@ const changeLang = (lang) => { locale.value = lang; };
 <template>
   <pv-toolbar id="toolbar-header">
     <template #start>
-      <img src="../../assets/images/logo.png" alt="Logo">
+      <img src="/assets/images/logo.png" alt="Logo">
       <h1 id="toolbar-title">Salvador Salinas </h1>
     </template>
     <template #end>
