@@ -18,11 +18,11 @@
       <pv-accordion-panel value="2">
         <pv-accordion-header>{{ $t('courses') }}</pv-accordion-header>
         <pv-accordion-content>
-          <h3><a href="https://www.coursera.org/account/accomplishments/certificate/RQ3E7USVYFNZ">{{$t('course1')}}</a></h3> Universidad de los Andes - Coursera
-          <h3><a href="https://www.coursera.org/account/accomplishments/certificate/ZYJK9497HQFU">{{$t('course2')}}</a></h3> Google - Coursera
-          <h3><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/APMZ6F9VAFBQ">{{ $t('course3')}}</a></h3> University of Michigan - Coursera
-          <h3><a href="https://learn.mongodb.com/c/e5Q5184pQqGzApUPWwXMIQ">{{ $t('course4')}}</a></h3> MongoDB University
-          <h3><a href="https://www.coursera.org/account/accomplishments/specialization/FM9DXAFVZ3ES">{{$t('course5')}}</a></h3> University of California, Davis - Coursera
+          <h3><a href="https://www.coursera.org/account/accomplishments/certificate/RQ3E7USVYFNZ" target="_blank">{{$t('course1')}}</a></h3> Universidad de los Andes - Coursera
+          <h3><a href="https://www.coursera.org/account/accomplishments/certificate/ZYJK9497HQFU" target="_blank">{{$t('course2')}}</a></h3> Google - Coursera
+          <h3><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/APMZ6F9VAFBQ" target="_blank">{{ $t('course3')}}</a></h3> University of Michigan - Coursera
+          <h3><a href="https://learn.mongodb.com/c/e5Q5184pQqGzApUPWwXMIQ" target="_blank">{{ $t('course4')}}</a></h3> MongoDB University
+          <h3><a href="https://www.coursera.org/account/accomplishments/specialization/FM9DXAFVZ3ES" target="_blank">{{$t('course5')}}</a></h3> University of California, Davis - Coursera
         </pv-accordion-content>
       </pv-accordion-panel>
       <pv-accordion-panel value="3">

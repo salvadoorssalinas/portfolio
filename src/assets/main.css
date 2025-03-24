@@ -12,6 +12,10 @@ body{
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  background-image: url('assets/images/background.jpg');
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
 }
 
 #app{
@@ -48,7 +52,7 @@ a {
   color: #637bc8;
 }
 a:hover {
-  color: #00bd7e;
+  color: #1be4dd;
 }
 
 @media screen and (max-width: 768px) {
