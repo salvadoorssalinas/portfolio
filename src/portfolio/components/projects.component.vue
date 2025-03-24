@@ -25,7 +25,7 @@ watch(locale, (newLang) => {
         </span>
       </template>
       <template #content="project">
-        <pv-card class="mt-4">
+        <pv-card id="project-card" class="mt-4">
           <template #title>
             {{ project.item.name }}
           </template>
@@ -69,5 +69,8 @@ img {
   margin-bottom: 20px;
 }
 
+#project-card {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 </style>
