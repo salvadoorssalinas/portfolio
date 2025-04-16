@@ -143,7 +143,8 @@ p {
 
 .inputt {
   margin: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 i {

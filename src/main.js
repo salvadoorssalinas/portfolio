@@ -30,6 +30,7 @@ import ToastService from "primevue/toastservice";
 import 'primeicons/primeicons.css';
 
 const app = createApp(App);
+document.body.classList.add('dark-mode');
 app.use(i18n)
     .use(PrimeVue, {
         ripple: true,
@@ -58,3 +59,4 @@ app.use(i18n)
     .component('pv-toast', Toast)
     .use(ToastService)
     .mount('#app')
+

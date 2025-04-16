@@ -60,7 +60,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #637bc8;
+  color: #3f55a3;
 }
 
 img {
@@ -70,7 +70,7 @@ img {
 }
 
 #project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.45);
 }
 
 </style>

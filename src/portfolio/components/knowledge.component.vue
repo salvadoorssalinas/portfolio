@@ -8,7 +8,7 @@
   <div id="knowledge">
     <pv-accordion :value="['0']" multiple>
       <pv-accordion-panel value="1">
-        <pv-accordion-header>{{ $t('skills') }}</pv-accordion-header>
+        <pv-accordion-header id="subtitle">{{ $t('skills') }}</pv-accordion-header>
         <pv-accordion-content>
           <h3>{{ $t('languages')}}</h3> C++, C#, Python, Java, JavaScript, TypeScript, Kotlin, Dart
           <h3>{{ $t('frameworks')}}</h3> .NET, Spring Boot, Jetpack Compose, Vue.js, Angular
@@ -16,7 +16,7 @@
         </pv-accordion-content>
       </pv-accordion-panel>
       <pv-accordion-panel value="2">
-        <pv-accordion-header>{{ $t('courses') }}</pv-accordion-header>
+        <pv-accordion-header id="subtitle">{{ $t('courses') }}</pv-accordion-header>
         <pv-accordion-content>
           <h3><a href="https://www.coursera.org/account/accomplishments/certificate/RQ3E7USVYFNZ" target="_blank">{{$t('course1')}}</a></h3> Universidad de los Andes - Coursera
           <h3><a href="https://www.coursera.org/account/accomplishments/certificate/ZYJK9497HQFU" target="_blank">{{$t('course2')}}</a></h3> Google - Coursera
@@ -26,7 +26,7 @@
         </pv-accordion-content>
       </pv-accordion-panel>
       <pv-accordion-panel value="3">
-        <pv-accordion-header>{{ $t('tools') }}</pv-accordion-header>
+        <pv-accordion-header id="subtitle">{{ $t('tools') }}</pv-accordion-header>
         <pv-accordion-content>
           <h3>IDEs</h3> Visual Studio, Visual Studio Code, WebStorm, IntelliJ IDEA, Android Studio, Rider
           <h3>VCS</h3> Git, GitHub
@@ -42,6 +42,13 @@
 </template>
 
 <style scoped>
+
+  #subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #637bc8;
+    margin-top: 20px;
+  }
 
   #knowledge {
     padding: 0 40px 30px 40px;

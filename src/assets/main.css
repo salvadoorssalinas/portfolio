@@ -7,6 +7,17 @@
   --breakpoint-ultrawide: 2560px;
 }
 
+.dark-mode {
+  --background-color: #121212; /* Fondo oscuro */
+  --text-color: #ffffff; /* Texto claro */
+}
+
+body.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body{
   margin: 0;
   padding: 0;
